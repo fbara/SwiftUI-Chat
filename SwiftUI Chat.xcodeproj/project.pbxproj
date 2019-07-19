@@ -13,6 +13,7 @@
 		AD47C2AD22E1F2FC00F9B69B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD47C2AC22E1F2FC00F9B69B /* Assets.xcassets */; };
 		AD47C2B022E1F2FC00F9B69B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD47C2AF22E1F2FC00F9B69B /* Preview Assets.xcassets */; };
 		AD47C2B322E1F2FC00F9B69B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD47C2B122E1F2FC00F9B69B /* LaunchScreen.storyboard */; };
+		AD47C2BB22E1FABB00F9B69B /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47C2BA22E1FABB00F9B69B /* ChatController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AD47C2AF22E1F2FC00F9B69B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD47C2B222E1F2FC00F9B69B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD47C2B422E1F2FC00F9B69B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD47C2BA22E1FABB00F9B69B /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AD47C2A622E1F2FA00F9B69B /* AppDelegate.swift */,
 				AD47C2A822E1F2FA00F9B69B /* SceneDelegate.swift */,
 				AD47C2AA22E1F2FA00F9B69B /* ContentView.swift */,
+				AD47C2BC22E1FAC600F9B69B /* Controller */,
 				AD47C2AC22E1F2FC00F9B69B /* Assets.xcassets */,
 				AD47C2B122E1F2FC00F9B69B /* LaunchScreen.storyboard */,
 				AD47C2B422E1F2FC00F9B69B /* Info.plist */,
@@ -73,6 +76,14 @@
 				AD47C2AF22E1F2FC00F9B69B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD47C2BC22E1FAC600F9B69B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD47C2BA22E1FABB00F9B69B /* ChatController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				AD47C2A722E1F2FA00F9B69B /* AppDelegate.swift in Sources */,
 				AD47C2A922E1F2FA00F9B69B /* SceneDelegate.swift in Sources */,
 				AD47C2AB22E1F2FA00F9B69B /* ContentView.swift in Sources */,
+				AD47C2BB22E1FABB00F9B69B /* ChatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

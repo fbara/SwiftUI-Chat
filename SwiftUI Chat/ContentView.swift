@@ -12,6 +12,24 @@ import SwiftUI
 struct ChatMessage: Hashable {
     var message: String
     var avatar: String
+    var color: Color
+}
+
+// chatrow will be very similar to a cell in standard swift
+struct ChatRow: View {
+    // we will need to access and represent the chatMessages here
+    var chatMessage: ChatMessage
+    
+    var body: some View {
+        HStack {
+            Text(chatMessage.avatar)
+            Text(chatMessage.message)
+            .bold()
+            .foregroundColor(Color.white)
+            .padding(10)
+            .background(chatMessage.color, cornerRadius: 10)
+        }
+    }
 }
 
 struct ContentView: View {
@@ -21,8 +39,8 @@ struct ContentView: View {
     // A sent "Hello world" with a red message bubble color
     // B sent "Hi" with a blue message color
     var messages = [
-        ChatMessage(message: "Hello", avatar: "A"),
-        ChatMessage(message: "Hi", avatar: "B")
+        ChatMessage(message: "Hello", avatar: "A", color: .red),
+        ChatMessage(message: "Hi", avatar: "B", color: .blue)
     ]
     
     var body: some View {
@@ -31,8 +49,7 @@ struct ContentView: View {
             ForEach(messages, id: \.self) {
                 // then we just show the avatars of the users and their messages
                 // by using these two Text functions
-                Text($0.avatar)
-                Text($0.message)
+                ChatRow(chatMessage: $0)
             }
         }
     }
@@ -42,6 +59,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        .environmentObject(ChatController())
     }
 }
 #endif
