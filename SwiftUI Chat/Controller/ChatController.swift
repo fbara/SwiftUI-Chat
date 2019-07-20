@@ -14,8 +14,8 @@ import SwiftUI
 
 // ChatController needs to be a BindableObject in order to be accessible by SwiftUI
 class ChatController: BindableObject {
-    //var willChange: PassthroughSubject<Void, Never>()
-    var didChange = PassthroughSubject<Void, Never>()
+    var willChange = PassthroughSubject<Void, Never>()
+    //var didChange = PassthroughSubject<Void, Never>()
     
     // We've relocated the messages from the main SwiftUI View.
     // Now, if you wish, you can handle the networking part here and populate this array with any data from your database.
@@ -31,7 +31,7 @@ class ChatController: BindableObject {
         // populate the messages array
         messages.append(chatMessage)
         // let the SwiftUI know that we need to rebuild the views
-        //willChange.send(())
-        didChange.send(())
+        willChange.send(())
+        //didChange.send(())
     }
 }
